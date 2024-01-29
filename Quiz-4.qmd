@@ -1,0 +1,31 @@
+---
+title: "Quiz 4"
+author: "Hari Lee"
+format: html
+---
+```{r}
+#### Workspace setup ####
+library(tidyverse)
+```
+
+```{r}
+#Simulate plane landing per hour data
+
+ simulated_data <- data.frame(
+  hour=c("1","2","3","4","5","6","7","8"),  
+  landing_planes=c(10,34,26,56,68,34,12,9)
+)
+simulated_data
+
+# Test 1
+simulated_data$hour|> min()==1
+simulated_data$hour|> max()==8
+
+# Test 2
+simulated_data$landing_planes|> min()==9
+simulated_data$landing_planes|> max()==68
+
+#Test 3
+length(unique(simulated_data$hour)) == 8
+```
+

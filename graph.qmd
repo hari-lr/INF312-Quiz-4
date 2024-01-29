@@ -1,0 +1,20 @@
+---
+title: "Quiz-4-Graph"
+author: "Hari Lee"
+format: pdf
+---
+```{r}
+#### Workspace setup ####
+library(ggplot2)
+```
+
+```{r}
+simulated_data <- data.frame(
+  hour=c("1","2","3","4","5","6","7","8"),  
+  landing_planes=c(10,34,26,56,68,34,12,9)
+)
+# Bar graph
+ggplot(simulated_data, aes(x=hour, y=landing_planes)) + 
+  geom_bar(stat = "identity") 
+```
+
